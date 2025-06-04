@@ -1,17 +1,17 @@
-Absolutely — here’s the final, complete setup-midi.sh Bash script for your Raspberry Pi 4 Lite that:
+#Absolutely — here’s the final, complete setup-midi.sh Bash script for your Raspberry Pi 4 Lite that:
 
-✅ Features
+#✅ Features
 
-Feature	Behavior
-Installs Pure Data vanilla	via apt
-Installs ELSE library	builds it into ~/pd-externals/else
-Sets Pd to load ELSE + ~/pd-patches	via .pdsettings/pdstartupflags
-Creates ~/pd-patches folder	for your controller.pd and future patches
-Auto-starts controller.pd on boot	in headless/nogui mode
-Assigns MIDI devices to fixed port IDs	APC Mini = 1, SQ-1 = 2, Elektron Syntakt = 3
-Runs the MIDI mapping and Pd patch at boot	via systemd service
+#Feature	Behavior
+#Installs Pure Data vanilla	via apt
+#Installs ELSE library	builds it into ~/pd-externals/else
+#Sets Pd to load ELSE + ~/pd-patches	via .pdsettings/pdstartupflags
+#Creates ~/pd-patches folder	for your controller.pd and future patches
+#Auto-starts controller.pd on boot	in headless/nogui mode
+#Assigns MIDI devices to fixed port IDs	APC Mini = 1, SQ-1 = 2, Elektron Syntakt = 3
+#Runs the MIDI mapping and Pd patch at boot	via systemd service
 
-🧾 Final Script: setup-midi.sh
+#🧾 Final Script: setup-midi.sh
 
 #!/bin/bash
 
@@ -127,35 +127,33 @@ echo ">>> Done!"
 echo "🟢 Copy your Pure Data patch to: ~/pd-patches/controller.pd"
 echo "🟢 It will auto-launch on boot with ELSE library and MIDI mappings."
 
-✅ How to Use It
-	1.	Save the script:
+#✅ How to Use It
+#	1.	Save the script:
 
 nano setup-midi.sh
 
 
-	2.	Paste the full script above.
-	3.	Make it executable:
+	#2.	Paste the full script above.
+	#3.	Make it executable:
 
-chmod +x setup-midi.sh
-
-
-	4.	Run it:
-
-./setup-midi.sh
+#chmod +x setup-midi.sh
 
 
-	5.	Add your patch:
+	#4.	Run it:
 
-cp your-patch.pd ~/pd-patches/controller.pd
+#./setup-midi.sh
 
 
-	6.	Reboot:
+	#5.	Add your patch:
 
-sudo reboot
+#cp your-patch.pd ~/pd-patches/controller.pd
 
-✅ After Reboot
-	•	Your MIDI devices will be auto-detected and ordered (APC, SQ-1, Syntakt).
-	•	Pd will launch controller.pd in headless mode.
-	•	else and ~/pd-patches will be included in Pd’s search path.
 
-Would you like a feature to log MIDI device mapping or auto-restart Pd if it crashes?
+	#6.	Reboot:
+
+#sudo reboot
+
+#✅ After Reboot
+	#Your MIDI devices will be auto-detected and ordered (APC, SQ-1, Syntakt).
+	#•	Pd will launch controller.pd in headless mode.
+	#•	else and ~/pd-patches will be included in Pd’s search path.
