@@ -1,0 +1,16 @@
+#N canvas 230 146 450 300 12;
+#X obj 70 97 expr $f1 \; $f1*(4/3) \; $f1 * (3/2) \; $f1 * 2 \; $f1 * 8/3 \; $f1 * 5/4 \; $f1 * 9/8 \; $f1 * 15/8 \; $f1 * 16/9 \;, f 31;
+#X obj 73 71 inlet frequ;
+#X obj 68 241 pack f f f f f f f f f;
+#X obj 68 265 outlet;
+#X connect 0 0 2 0;
+#X connect 0 1 2 1;
+#X connect 0 2 2 2;
+#X connect 0 3 2 3;
+#X connect 0 4 2 4;
+#X connect 0 5 2 5;
+#X connect 0 6 2 6;
+#X connect 0 7 2 7;
+#X connect 0 8 2 8;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;

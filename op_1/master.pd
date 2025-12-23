@@ -1,0 +1,10 @@
+#N canvas 83 380 627 433 12;
+#X obj 106 214 dac~;
+#X obj 106 118 phy1;
+#X obj 194 180 texture;
+#X obj 159 44 accent4;
+#X obj 276 139 decay;
+#X obj 272 91 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 291 91 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X connect 5 0 4 1;
+#X connect 6 0 4 0;
